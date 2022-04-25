@@ -1,0 +1,36 @@
+
+
+
+.icones{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;   
+}
+
+.icones i{
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    color: black;
+    cursor: pointer;
+}
+
+.icones i:nth-child(3){
+    display: none;
+}
+
+.icones p{
+    width: 32px;
+    height: 32px;
+    margin: unset;
+    margin-right: 6px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    cursor: pointer;  
+}
