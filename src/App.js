@@ -6,7 +6,14 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Filter />
+      <div className='content'>
+        <div className='content-icone'>Icones</div>
+        <div className='content-main'>
+          <Filter />
+          <div>Contenu cartes</div>
+        </div>
+      </div>
+      
     </div>
   );
 }

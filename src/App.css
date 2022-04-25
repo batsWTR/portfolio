@@ -2,4 +2,11 @@
   text-align: center;
 }
 
+.content{
+  display: flex;
+  border: 1px solid black;
+}
 
+.content-main{
+  flex-grow: 1;
+}
