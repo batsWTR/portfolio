@@ -3,7 +3,7 @@ import "../styles/ButtonFilter.css";
 
 function ButtonFilter(props){
     return(
-        <button className="buttonFilter">{ props.name }</button>
+        <button className="buttonFilter" title={ props.name }>{ props.name }</button>
     )
 }
 

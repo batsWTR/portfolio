@@ -1,11 +1,13 @@
+import '../styles/Filter.css';
 import ButtonFilter from './ButtonFilter';
+
 
 
 function Filter(){
     return(
-        <div>
-            <ButtonFilter name="exp"/>
-            <ButtonFilter name="dip" />
+        <div className="filter">
+            <ButtonFilter name="Expérience"/>
+            <ButtonFilter name="diplomes" />
         </div>
     );
 }

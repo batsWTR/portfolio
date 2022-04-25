@@ -2,6 +2,23 @@
 
 
 .buttonFilter{
-    padding: 8px;
-    margin: 10px;
+    font-size: 16px;
+    color: #030303;
+    border:1px solid #d9d9d9;
+    border-radius: 16px;
+    height: 32px;
+    padding:  4px 12px;
+    background-color: #f2f2f2;
+    cursor: pointer;
+
+}
+
+
+.buttonFilter:hover{
+    background-color: #e5e5e5;
+}
+
+.buttonFilter:active{
+    background-color: #030303;
+    color: #fff;
 }
