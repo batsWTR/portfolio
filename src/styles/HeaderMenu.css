@@ -14,3 +14,17 @@
     padding: 8px;
     cursor: pointer;  
 }
+
+.logo div{
+    border: 2px solid red;
+    height: 40px;
+    width: 90px;
+
+
+}
+
+.logo img{
+    max-width: 100%;
+    height: auto;
+    margin: 8px 0;
+}
