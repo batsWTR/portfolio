@@ -1,42 +1,48 @@
-import { isVisible } from '@testing-library/user-event/dist/utils';
+import React from 'react';
 import '../styles/Filter.css';
 import ButtonFilter from './ButtonFilter';
 
 
 
-function Filter(){
-    const items = [
-        {name:'Tous', isActive: true}, 
-        {name:'Expériences', isActive: false}, 
-        {name:'Réalisations', isActive: false}, 
-        {name:'Diplômes', isActive: false}, 
-        {name:'Hobbies', isActive: false}
-    ];
-    const itemList =[];
+class Filter extends React.Component{
+    constructor(props){
+        super(props);
+        const elements = this.props
 
-    items.map((el,id) =>{
-         itemList.push(<ButtonFilter name={ el.name } isActive={ el.isActive} key={el.name+id} />);
-    });
+        this.state = elements;
+    }
     
-    function handleClick(ev){
+    handleClick(ev){
         console.log(ev.target.title);
-        console.log(items);
-        items.map((el,id,ar)=>{
+        const it = this.state;
+
+        it.items.map((el,id,ar)=>{
+            el.isActive = false;
             if(el.name === ev.target.title){
                 ar[id].isActive = true;
             }
         });
 
-        items.map((el,id) =>{
-            itemList.push(<ButtonFilter name={ el.name } isActive={ el.isActive} key={el.name+id} />);
-       });
-    };
+        this.setState(it);
+ 
+    }
 
-    return(
-        <div className="filter" onClick={handleClick}>
-            { itemList }
-        </div>
-    );
+    render(){
+        console.log(this.state);
+        const list = this.state;
+        const itemList =[];
+    
+        this.props.items.map((el,id) =>{
+             itemList.push(<ButtonFilter name={ el.name } isActive={ el.isActive} key={el.name+id} />);
+        });
+
+        return(
+            <div className="filter" onClick={this.handleClick.bind(this)}>
+                { itemList }
+            </div>
+        );
+    }
+    
 }
 
 
