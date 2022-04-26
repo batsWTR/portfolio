@@ -22,3 +22,8 @@
     background-color: #030303;
     color: #fff;
 }
+
+.buttonFilter.active{
+    background-color: #030303;
+    color: #fff;
+}
