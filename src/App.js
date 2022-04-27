@@ -15,8 +15,8 @@ const items = [
 ];
 
 const cards = [
-  {title:"Belle o natur'elle",image:"#", view:"10K"},
-  {title:"O'cado", image:"#", view:"30K"},
+  {title:"Belle o natur'elle",image:"#", category:"Réalisations", view:"10K"},
+  {title:"O'cado", image:"#", category:"Réalisations", view:"30K"},
 
   {title:"Armée de terre", image:"#", category:"Expériences", view:"1998-2003"},
   {title:"Technicien télécom Gobé", image:"#", category:"Expériences", view:"2003-2008"},
