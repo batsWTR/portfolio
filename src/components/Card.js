@@ -15,7 +15,7 @@ function Card(props){
                 <div className="card-content-user">B</div>
                 <div>
                     <h3>{ props.info.title}</h3>
-                    <p>mis en ligne</p>
+                    <p>{ props.info.description }</p>
                     <p>{ props.info.view }</p>
                 </div>
                 <div className="card-content-svg">

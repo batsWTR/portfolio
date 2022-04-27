@@ -16,13 +16,13 @@ const items = [
 
 const cards = [
   {title:"Belle o natur'elle",image:"#", category:"Réalisations", view:"10K"},
-  {title:"O'cado", image:"#", category:"Réalisations", view:"30K"},
+  {title:"O'cado", image:"./assets/realisations/Ocado.png", category:"Réalisations", description:"Site de partage de liste de cadeaux", view:"30K"},
 
-  {title:"Armée de terre", image:"#", category:"Expériences", view:"1998-2003"},
-  {title:"Technicien télécom Gobé", image:"#", category:"Expériences", view:"2003-2008"},
+  {title:"Armée de terre", image:"./assets/experiences/armee.jpg", category:"Expériences", view:"1998-2003"},
+  {title:"Technicien télécom Gobé", image:"./assets/experiences/gobe.jpg", category:"Expériences", view:"2003-2008"},
   {title:"Technicien télécom SDIS", image:"#", category:"Expériences", view:"2009"},
   {title:"Technicien télécom SPIE", image:"#", category:"Expériences", view:"2010-2012"},
-  {title:"Technicien radio CERN", image:"#", category:"Expériences", view:"2012-2014"},
+  {title:"Technicien radio CERN", image:"./assets/experiences/cern.jpg", category:"Expériences", view:"2012-2014"},
   {title:"Technicien boucle locale Eiffage", image:"#", category:"Expériences", view:"2016"},
   {title:"Technicien SAV télécom Alp'com", image:"#", category:"Expériences", view:"2016-2020"}
 ]
