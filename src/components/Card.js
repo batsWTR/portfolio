@@ -3,8 +3,13 @@ import '../styles/Card.css';
 
 
 function Card(props){
+
+    function cardClick(){
+        console.log('click card ',props.info.title);
+    }
+    
     return (
-        <article className="card">
+        <article className="card" onClick={ cardClick }>
             <div className="card-img"><img src={ props.info.image } alt={ props.info.title } /></div>
             <div className="card-content">
                 <div className="card-content-user">B</div>

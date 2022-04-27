@@ -27,11 +27,12 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 8px;
+    gap: 4px;
     margin-top: 8px;  
 }
 
 .card-content-user{
+    flex-shrink: 0;
     width: 36px;
     height: 36px;
     background-color: #7d57c1;
