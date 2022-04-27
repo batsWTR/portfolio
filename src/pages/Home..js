@@ -1,15 +1,9 @@
-<<<<<<< HEAD:src/pages/Home..js
+import React from 'react';
 import '../styles/Home.css';
 import Header from '../components/Header';
 import Filter from '../components/Filter';
-=======
-import React from 'react';
-import './App.css';
-import Header from './components/Header';
-import Filter from './components/Filter';
-import MenuLarge from './components/MenuLarge';
-import Card from './components/Card';
->>>>>>> 1918baef3693ec943f4d9e61b016d9e419b697b9:src/App.js
+import Card from '../components/Card';
+import MenuLarge from '../components/MenuLarge';
 
 
 const items = [
