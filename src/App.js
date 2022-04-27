@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import Header from './components/Header';
 import Filter from './components/Filter';
@@ -16,6 +17,7 @@ const items = [
 const cards = [
   {title:"Belle o natur'elle",image:"#", view:"10K"},
   {title:"O'cado", image:"#", view:"30K"},
+
   {title:"Armée de terre", image:"#", category:"Expériences", view:"1998-2003"},
   {title:"Technicien télécom Gobé", image:"#", category:"Expériences", view:"2003-2008"},
   {title:"Technicien télécom SDIS", image:"#", category:"Expériences", view:"2009"},
@@ -26,30 +28,66 @@ const cards = [
 ]
 
 
-function App() {
-  const cardList = []
+class App extends React.Component {
 
-  cards.map(el =>{
-    cardList.push(<Card info={ el } />)
-  })
+  constructor(props){
+    super(props);
+    this.state = {items: items, cards: cards};
 
-  return (
-    <div className="App">
-      <Header />
-      <div className='content'>
-        <MenuLarge />
-        <div className='content-main'>
-          <div>
-            <Filter items={ items }/>
-          </div>
-          <div className='content-cards'>
-            { cardList }
+  }
+  
+
+
+  filterClick(cat){
+    items.map((el,id,ar) =>{
+      ar[id].isActive = false;
+      el.name === cat ? el.isActive = true : el.isActive = false;
+    });
+
+    let updatedCards = [];
+
+    if(cat === 'Tous'){
+      updatedCards = [...cards];
+    }else{
+      cards.map(el =>{
+        if(el.category === cat){
+          updatedCards.push(el);
+        }
+      })
+    }
+    this.setState({items: items, cards: updatedCards});
+  }
+
+
+
+  render(){
+
+    const cardList = [];
+    this.state.cards.map((el,id) =>{
+      cardList.push(<Card info={ el } key={id}/>)
+    });
+
+    return (
+      <div className="App">
+        <Header />
+        <div className='content'>
+          <MenuLarge />
+          <div className='content-main'>
+            <div>
+              <Filter items={ this.state.items } filterChoice={ this.filterClick.bind(this) }/>
+            </div>
+            <div className='content-cards'>
+              { cardList }
+            </div>
           </div>
         </div>
+        
       </div>
-      
-    </div>
-  );
+    );
+  }
 }
+
+
+
 
 export default App;
