@@ -1,26 +1,29 @@
-import { isVisible } from '@testing-library/user-event/dist/utils';
+
 import '../styles/Filter.css';
 import ButtonFilter from './ButtonFilter';
 
 
 
-function Filter(){
-    const items = ['Tous', 'Expériences', 'Réalisations', 'Diplômes', 'Hobbies'];
-    const itemList =[];
-
-    items.map((el,id) =>{
-         itemList.push(<ButtonFilter name={ el } key={el+id} />);
-    });
+function Filter(props){
     
     function handleClick(ev){
-        console.log(ev.target.title);
-    };
+        props.filterChoice(ev.target.title);
+    }
+
+
+    const itemList =[];
+    
+    props.items.map((el,id) =>{
+        itemList.push(<ButtonFilter name={ el.name } isActive={ el.isActive} key={el.name+id} />);
+    });
 
     return(
-        <div className="filter" onClick={handleClick}>
+        <div className="filter" onClick={ handleClick }>
             { itemList }
         </div>
     );
+    
+    
 }
 
 

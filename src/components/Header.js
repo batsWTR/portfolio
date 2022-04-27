@@ -3,10 +3,10 @@ import HeaderMenu from './HeaderMenu';
 import HeaderSearch from './HeaderSearch';
 import HeaderIcones from './HeaderIcones';
 
-function Header(){
+function Header(props){
     return(
         <header>
-            <HeaderMenu />
+            <HeaderMenu click={ props.click} />
             <HeaderSearch />
             <HeaderIcones />
         </header>

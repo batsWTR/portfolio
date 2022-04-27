@@ -4,9 +4,18 @@
 
 .content{
   display: flex;
-  border: 1px solid black;
 }
 
 .content-main{
   flex-grow: 1;
+}
+
+.content-cards{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+  background-color: #f9f6f6;
 }
