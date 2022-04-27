@@ -32,7 +32,7 @@ class App extends React.Component {
 
   constructor(props){
     super(props);
-    this.state = {items: items, cards: cards};
+    this.state = {items: items, cards: cards, menuVisible: true};
 
   }
   
@@ -59,6 +59,11 @@ class App extends React.Component {
   }
 
 
+  menuClick(){
+    console.log("menu click");
+    this.state.menuVisible ? this.setState({menuVisible: false}) : this.setState({menuVisible: true});
+  }
+
 
   render(){
 
@@ -69,9 +74,12 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <Header />
+        <Header click={ this.menuClick.bind(this) }/>
         <div className='content'>
-          <MenuLarge />
+          {
+          this.state.menuVisible ? <MenuLarge /> : null
+            
+          }
           <div className='content-main'>
             <div>
               <Filter items={ this.state.items } filterChoice={ this.filterClick.bind(this) }/>

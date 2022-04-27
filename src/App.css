@@ -4,7 +4,6 @@
 
 .content{
   display: flex;
-  border: 1px solid black;
 }
 
 .content-main{
@@ -18,4 +17,5 @@
   justify-content: center;
   gap: 12px;
   padding: 12px;
+  background-color: #f9f6f6;
 }
