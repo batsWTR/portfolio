@@ -1,7 +1,8 @@
 import './App.css';
 import Header from './components/Header';
 import Filter from './components/Filter';
-import MenuLarge from './components/MenuLarge'
+import MenuLarge from './components/MenuLarge';
+import Card from './components/Card';
 
 
 const items = [
@@ -12,8 +13,19 @@ const items = [
   {name:'Hobbies', isActive: false}
 ];
 
+const cards = [
+  {title:"Belle o natur'elle", view:"10K"},
+  {title:"O'cado", view:"30K"}
+]
+
 
 function App() {
+  const cardList = []
+
+  cards.map(el =>{
+    cardList.push(<Card info={ el } />)
+  })
+
   return (
     <div className="App">
       <Header />
@@ -23,7 +35,9 @@ function App() {
           <div>
             <Filter items={ items }/>
           </div>
-          <div>Contenu cartes</div>
+          <div className='content-cards'>
+            { cardList }
+          </div>
         </div>
       </div>
       

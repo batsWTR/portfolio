@@ -28,8 +28,6 @@ class Filter extends React.Component{
     }
 
     render(){
-        console.log(this.state);
-        const list = this.state;
         const itemList =[];
     
         this.props.items.map((el,id) =>{
