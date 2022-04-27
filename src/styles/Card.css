@@ -7,7 +7,15 @@
     min-width: 246px;
     max-height: 300px;
     min-height: 250px;
-    cursor: pointer;   
+    background-color: #fff;
+    cursor: pointer; 
+    transition: 0s transform;  
+}
+
+.card:hover{
+    transform: scale(1.4);
+    transition-delay: 1.5s;
+    transform-origin: 50% 14%;
 }
 
 .card-img{
